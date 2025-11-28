@@ -99,9 +99,7 @@ void loop() {
           if (!client.connected()) {
             reconnect();
           }
-          client.loop();
-
-          
+                    
           client.publish(mqttTopic, "auto");
           Serial.println("Mensagem enviada ao Maqiatto!");
           delay(300);
@@ -109,7 +107,7 @@ void loop() {
           Serial.println("Mensagem enviada ao Maqiatto!");
           // envia msg pro esp4 aqui <-----------
           // aciona o rele aqui <-----------
-          delay(1000); 
+          delay(700); 
           digitalWrite(pino, LOW);
           
         } else {
