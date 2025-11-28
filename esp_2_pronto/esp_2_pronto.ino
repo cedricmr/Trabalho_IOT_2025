@@ -100,7 +100,7 @@ void loop() {
     lastMsg = 0;
     delay(1000);
   }
-  if (millis() - lastMsg >= 5000 && lastMsg != 0) {
+  if (millis() - lastMsg >= 5000 && lastMsg != 0 && !statusLed) {
     if (!client.connected()) {
      reconnect();
     } 
